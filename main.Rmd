@@ -1,0 +1,52 @@
+---
+title: "Flexdash Genérico"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+runtime: shiny
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(datasets)
+library(dplyr)
+source("./utils.R")
+source("./viz.R")
+
+# Documentation:
+# https://bookdown.org/yihui/rmarkdown/dashboards.html
+```
+
+Row {data-height=100}
+-------------------------------------
+
+### KPI - 1
+
+```{r}
+kpi1 <- 10
+valueBox(kpi1, icon = "fa-pencil")
+
+```
+
+### KPI - 2 
+
+```{r}
+kpi2 <- 15
+valueBox(kpi2, icon = "fa-comments")
+```
+
+Row {data-height=400}
+------------------------
+
+### Teste
+
+```{r}
+my_plot1 <- plot(JohnsonJohnson)
+```
+
+### Teste
+
+```{r}
+my_plot2 <- plot(JohnsonJohnson)
+```
